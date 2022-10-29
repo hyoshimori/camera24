@@ -6,9 +6,13 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   # camera
-  get "/cameras", to: "cameras#index"
+  resources :cameras, only: [:index, :show, :new, :create] do
+    resources :offers, only: [:new, :create]
+  end
 
   # user
+  resources :users, only: [:new, :create]
 
   # offer
+  resources :offers, only: [:index, :show, :edit, :update]
 end
