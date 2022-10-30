@@ -1,8 +1,22 @@
 // Specific CSS for your home-page
 
 
-// NavBar
+// navbar
 
-// .navbar{
-//   background-color: black;
-// }
+.navbar{
+  background-color: white;
+  padding: 20px;
+}
+
+.navbar--pink h1{
+  color: #FF385C;
+  font-size:x-large;
+}
+
+.create__button{
+  text-decoration: none;
+  background-color: transparent;
+  outline: none;
+  border: solid 1px;
+  border-radius: 5px;
+}
