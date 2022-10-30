@@ -6,46 +6,12 @@ when naming classes and .... https://www.freecodecamp.org/news/css-naming-conven
     <h1>Camera24</h1>
   </div>
   <div>
-<%# <%= link_to "Create list",  new_list_path%>
-    <button type="button" class="create__button">Insert above</button>
-    <%# <%= link_to "Login", XXXXX_path, class: "nav-link" %>
+    <i class="fa-thin fa-camera"><%= link_to "Create", new_camera_path, class: "nav-link" %></i>
   </div>
 </div>
 
 <main>
   <div class="cameras__list">
-    <div>
-      <div class="test">
-        <p>Nicon d610</p>
-        <p>$40 / day</p>
-        <p>Paris</p>
-      </div>
-      <div class="test">
-        <p>canon 80d</p>
-        <p>$20 / day</p>
-        <p>Dublin</p>
-      </div>
-      <div class="test">
-        <p>Kodak S1100</p>
-        <p>$50 / day</p>
-        <p>London</p>
-      </div>
-      <div class="test">
-        <p>leica M Type 240</p>
-        <p>$540 / day</p>
-        <p>Paris</p>
-      </div>
-      <div class="test">
-        <p>Fujifilm X-T30</p>
-        <p>$100 / day</p>
-        <p>Dublin</p>
-      </div>
-      <div class="test">
-        <p>cano 70d</p>
-        <p>$20 / day</p>
-        <p>London</p>
-      </div>
-
       <% if !@cameras.nil? %>
         <% @cameras.each do |camera| %>
           <%= camera.name %>
@@ -53,9 +19,12 @@ when naming classes and .... https://www.freecodecamp.org/news/css-naming-conven
           <%= camera.location %>
         <% end %>
       <% end %>
-    </div>
   </div>
 </main>
+
+<%# Hey please work form here %>
+<div class="footer">
+</div>
 
 <div class="footer">
 </div>
