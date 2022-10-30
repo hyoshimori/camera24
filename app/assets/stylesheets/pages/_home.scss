@@ -7,12 +7,14 @@
   padding: 20px;
 }
 
-.navbar--pink h1{
+.navbar--pink a{
   color: $airbnb-color;
   font-size:x-large;
+  text-decoration: none;
 }
 
 a#create__button{
+  font-size: medium;
   text-decoration: none;
   background-color: transparent;
   padding: 5px 8px;
