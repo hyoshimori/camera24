@@ -1,16 +1,10 @@
 <%# let's follow this CSS convention
 when naming classes and .... https://www.freecodecamp.org/news/css-naming-conventions-that-will-save-you-hours-of-debugging-35cea737d849/ %>
 
-<div class="navbar navbar--pink">
-  <div class="icon">
-    <%= link_to "Camera24", root_path %>
-  </div>
-  <div>
-    <%= link_to "+ CREATE", new_camera_path, class: "button--color", id: "create__button" %>
-  </div>
-</div>
-
 <main>
+  <div class="container">
+    <h1>This is main body</h1>
+  </div>
   <div class="cameras__list">
       <% if !@cameras.nil? %>
         <% @cameras.each do |camera| %>
@@ -21,10 +15,4 @@ when naming classes and .... https://www.freecodecamp.org/news/css-naming-conven
       <% end %>
   </div>
 </main>
-
-<%# Hey please work form here %>
-<div class="footer">
-</div>
-
-<div class="footer">
 </div>

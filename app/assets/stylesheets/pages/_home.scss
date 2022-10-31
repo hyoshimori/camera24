@@ -1,33 +1,5 @@
 // Specific CSS for your home-page
 
-// navbar
-
-.navbar{
-  background-color: white;
-  padding: 20px;
+.container{
+  padding: 200px;
 }
-
-.navbar--pink a{
-  color: $airbnb-color;
-  font-size:x-large;
-  text-decoration: none;
-}
-
-a#create__button{
-  font-size: medium;
-  text-decoration: none;
-  background-color: transparent;
-  padding: 5px 8px;
-  border-radius: 10px;
-  border: solid 1px $airbnb-color;
-  cursor: pointer;
-  &:hover{
-    box-shadow: 0px 5px 10px 0px rgba(165, 165, 165, 0.5)
-  }
-}
-
-a.button--color{
-  color: $airbnb-color;
-}
-
-// footer
