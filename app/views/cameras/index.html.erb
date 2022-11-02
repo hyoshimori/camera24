@@ -56,7 +56,7 @@
         <img src="<%= photos.sample%>" alt="" width="250" height="150">
         <div class="cameras__texts">
           <%= link_to camera.name, camera_path(camera.id), class: "card__link" %><br>
-          Price per night: $<%= camera.price %>
+          Price per day: $<%= camera.price %>
         </div>
       </div>
     <% end %>
