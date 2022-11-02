@@ -1,6 +1,11 @@
 .navbar{
   background-color: white;
   padding: 20px;
+  border-bottom: solid 0.5px #DDDDDD;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10000;
 }
 
 .navbar--pink a{
@@ -24,4 +29,9 @@ a#create__button{
 
 a.button--color{
   color: $airbnb-color;
+}
+
+a.session{
+  font-size: medium;
+  margin-right: 15px;
 }

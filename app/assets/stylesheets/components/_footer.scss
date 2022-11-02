@@ -1,3 +1,16 @@
 .footer{
-  border: solid 0.1px black;
+  background-color: white;
+  border-top: solid 0.5px #DDDDDD;
+  margin-bottom: 0px;
+  padding-left: 20px;
+  width: 100%;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  bottom: 0;
+}
+
+.footer p{
+  padding-top: 7px;
+  color: #a5a5a5;
 }
