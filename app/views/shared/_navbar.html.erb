@@ -2,8 +2,15 @@
   <div class="icon">
     <%= link_to "Camera24", root_path %>
   </div>
-  <div>
-      <a href="#" class="session">Sign in</a>
-    <%= link_to "+ CREATE", new_camera_path, class: "button--color", id: "create__button" %>
-  </div>
+    <div class="navbar__right">
+      <%= link_to "+ CREATE", new_camera_path, class: "button--color", id: "create__button" %>
+        <div class="dropdown">
+          <button class="drop__button"></button>
+            <div class="dropdown__content">
+              <a href="#">Log in</a>
+              <a href="#">Sign in</a>
+              <a href="#">Your cameras</a>
+        </div>
+      </div>
+    </div>
 </div>
