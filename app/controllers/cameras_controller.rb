@@ -4,6 +4,7 @@ class CamerasController < ApplicationController
   end
 
   def show
+    @camera = Camera.find(params[:id])
   end
 
   def new
