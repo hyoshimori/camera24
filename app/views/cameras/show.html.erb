@@ -1,1 +1,10 @@
 <h1>Camera #</h1>
+<div>
+  <p><%= @camera.name %></p>
+  <p><%= @camera.location %></p>
+  <p><%= @camera.price %></p>
+</div>
+
+<% if user_signed_in? %>
+  <p><%= link_to "Borrow #{@camera.name}",  new_camera_offer_path(@camera.id) %></p>
+<% end %>

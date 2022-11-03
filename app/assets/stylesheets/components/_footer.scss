@@ -13,4 +13,12 @@
 .footer p{
   padding-top: 7px;
   color: #a5a5a5;
+  position: relative;
+}
+
+.User__info{
+  position: absolute;
+  color: $airbnb-color;
+  right: 20px;
+  top: 10px;
 }

@@ -1,6 +1,7 @@
-<%# Hey please work form here %>
 <div class="footer">
   <p>Camera24</p>
+  <% if user_signed_in? %>
+    <h6 class ="User__info">Hi <%= current_user.email %></h6>
+  <% end %>
 </div>
-
 <div class="footer">
