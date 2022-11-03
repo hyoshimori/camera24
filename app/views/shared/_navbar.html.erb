@@ -1,13 +1,14 @@
 <div class="navbar navbar--pink" data-controller="navbar">
   <div class="icon">
     <%= link_to "Camera24", root_path %>
-  </div>
+  </div> 
     <div class="navbar__right">
       <%= link_to "+ CREATE", new_camera_path, class: "button--color", id: "create__button" %>
         <div class="dropdown">
           <button class="drop__button"></button>
             <div class="dropdown__content">
               <a href="#">Log in</a>
+              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
               <a href="#">Sign in</a>
               <a href="#">Your cameras</a>
         </div>
