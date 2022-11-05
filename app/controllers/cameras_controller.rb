@@ -12,10 +12,8 @@ class CamerasController < ApplicationController
   end
 
   def create
-    @user_id = current_user.id
-    raise
-
     @camera = Camera.new(camera_params)
+    @camera.user = current_user
     if @camera.save
       redirect_to @camera, notice: "Your camera was successfully created!"
     else
