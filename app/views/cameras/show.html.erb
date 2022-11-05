@@ -7,7 +7,8 @@
     <p>Price per day: $<%= @camera.price %></p>
   </div>
 
-  <% if user_signed_in? %>
-    <p><%= link_to "Borrow #{@camera.name}",  new_camera_offer_path(@camera.id) %></p>
-  <% end %>
-</div>
+<% if user_signed_in? %>
+  <p><%= link_to "Borrow #{@camera.name}",  new_camera_offer_path(@camera.id) %></p>
+  <p><%= link_to "Edit #{@camera.name}",  edit_camera_path(@camera.id) %></p>
+  <p><%= link_to "Delete #{@camera.name}", camera_path(@camera.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete #{@camera.name}?"} %></p>
+<% end %>

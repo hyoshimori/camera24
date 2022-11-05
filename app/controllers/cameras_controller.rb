@@ -21,6 +21,22 @@ class CamerasController < ApplicationController
     end
   end
 
+  def edit
+    @camera = Camera.find(params[:id])
+  end
+
+  def update
+    camera = Camera.find(params[:id])
+    camera.update(camera_params)
+    redirect_to camera_path(camera)
+  end
+
+  def destroy
+    camera = Camera.find(params[:id])
+    camera.destroy
+    redirect_to cameras_path
+  end
+
   private
 
   def camera_params

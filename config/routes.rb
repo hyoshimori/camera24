@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   # camera
-  resources :cameras, only: [:index, :show, :new, :create] do
+  resources :cameras do
     resources :offers, only: [:new, :create]
   end
 
