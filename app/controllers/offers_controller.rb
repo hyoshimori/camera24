@@ -1,8 +1,10 @@
 class OffersController < ApplicationController
   def index
+    @offers = Offer.where(user_id: current_user)
   end
 
   def show
+    @offer = Offer.find(params[:id])
   end
 
   def new
@@ -11,13 +13,11 @@ class OffersController < ApplicationController
   end
 
   def create
-    @offer = Offer.new(offers_params)
-    @offer.camera = @camera
-    raise
+    @offer = Offer.new
     @camera = Camera.find(params[:camera_id])
-    raise
+    @offer.camera = @camera
+    @offer.user = current_user
     if @offer.save
-      raise
       redirect_to camera_path(@camera)
     else
       render :new, status: :unprocessable_entity
