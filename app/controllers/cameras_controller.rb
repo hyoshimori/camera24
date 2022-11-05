@@ -14,7 +14,7 @@ class CamerasController < ApplicationController
   def create
     @camera = Camera.new(camera_params)
     @camera.user = current_user
-    if @camera.save!
+    if @camera.save
       redirect_to @camera, notice: "Your camera was successfully created!"
     else
       render :new, status: :unprocessable_entity

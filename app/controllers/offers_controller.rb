@@ -1,8 +1,10 @@
 class OffersController < ApplicationController
   def index
+    @offers = Offer.where(user_id: current_user)
   end
 
   def show
+    @offer = Offer.find(params[:id])
   end
 
   def new
