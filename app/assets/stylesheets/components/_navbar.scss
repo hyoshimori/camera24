@@ -5,7 +5,7 @@
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 10000;
+  z-index: 20000;
 }
 
 .navbar--pink a{
@@ -20,10 +20,10 @@ a#create__button{
   background-color: transparent;
   padding: 3px 8px;
   border-radius: 20px;
-  border: solid 1px $airbnb-color;
+  border: solid 0.5px $airbnb-color;
   cursor: pointer;
   &:hover{
-    box-shadow: 0px 5px 10px 0px rgba(165, 165, 165, 0.5);
+    box-shadow: 0px 5px 10px 0px rgba(209, 209, 209, 0.5);
     transition: 0.3s;
   }
 }
@@ -43,6 +43,13 @@ a.session{
 }
 
 // dropdown
+
+.User__info_navbar{
+  color: $airbnb-color;
+  padding: 12px 16px;
+  top: -20px;
+  transition: 0.5s;
+}
 
 .drop__button{
   color: rgb(100, 100, 100);
@@ -68,13 +75,14 @@ a.session{
 
 .dropdown__content{
   position: absolute;
-  right: 0;
-  top: -300px;
+  right: -400px;
   background-color: white;
   min-width: 260px;
+  min-height: 100vh;
   box-shadow: 0px 5px 10px 0px rgba(165, 165, 165, 0.5);
   border-radius: 5px;
-  z-index: 1;
+  z-index: 20000;
+  transition: 0.5s;
 }
 
 .dropdown__content a{
@@ -90,6 +98,12 @@ a.session{
   border-radius: 5px;
 }
 
+.dropdown .dropdown__content{
+  top: -20px;
+}
+
 .dropdown:hover .dropdown__content{
-  top: 31px;
+  top: -20px;
+  right: -70px;
+  transition: 0.5s;
 }
