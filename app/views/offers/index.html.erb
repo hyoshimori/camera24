@@ -2,10 +2,26 @@
   <div class="navbar-fix">
     <h1>All my bookings</h1>
   </div>
-    <p><% @offers.each do |offer|%>
-      <%= link_to offer.camera.name, camera_path(offer.camera.id) %>,
-      <%= offer.camera.location %>,
-      <%= offer.camera.price %>
+  <%# maybe work with if statement to only show bookings that are != my own user_id %>
+    <p><% @offers.each_with_index do |offer, index|%>
+      Booking #<%= "#{index + 1}" %>:
+      <%= link_to offer.camera.name, camera_path(offer.camera.id) %>;
+      Location: <%= offer.camera.location %>;
+      $<%= offer.camera.price %> per day;
+      Status: <%= offer.status %>
     </p>
     <% end %>
+
+<%# maybe work with if statement to only show bookings where camera_id is one of my cameras%>
+
+<p><% @offers.each_with_index do |offer, index|%>
+      <%= link_to "Booking #" "#{index + 1}", offer_path(offer.id) %> :
+      <%= link_to offer.camera.name, camera_path(offer.camera.id) %>;
+      Location: <%= offer.camera.location %>;
+      $<%= offer.camera.price %> per day;
+      Status: <%= offer.status %>;
+      <%# Change status: <%= link_to "Change the status of this booking",  edit_offer_path(@offer.id) %>
+    </p>
+    <% end %>
+
 </div>
