@@ -1,6 +1,94 @@
-// Specific CSS for your home-page
+// why choose us
 
-.banner img{
-  width: 100%;
-  height: 500px;
+.why-choose-us{
+  text-align: center;
+  margin-top: 100px;
+  color: rgb(90, 90, 90);
+}
+
+.cards__city img {
+  width: 280px;
+  height: 250px;
+  border-radius: 10px;
+  margin: auto;
+  margin: 0 auto;
+  border: none;
+  box-shadow: 0px 5px 10px 0px rgba(165, 165, 165, 0.5);
+  margin-left: auto;
+}
+
+.cards__city{
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  padding: 16px;
+  flex-grow: 1;
+}
+
+div.card__city{
+  margin: 0 auto;
+}
+
+.card__city{
+  position: relative;
+}
+
+div.card__city a{
+  text-decoration: none;
+  position: absolute;
+  left: 30px;
+  top: 180px;
+  font-size: Large;
+  color: white;
+  opacity: 0.7;
+  border-bottom: solid 1px white;
+}
+
+.card__link__home::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: auto;
+  content: "";
+  background-color: transparent;
+}
+
+@media (max-width: 960px) {
+  /* For a screen < 960px, this CSS will be read */
+  .cards__city {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .cards__city {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .cards__city {
+    grid-template-columns: 1fr;
+  }
+
+  .copy h1{
+    left: 40px;
+  }
+  .copy h5{
+    left: 40px;
+  }
+  .signin a{
+    left: 40px;
+  }
 }

@@ -15,15 +15,16 @@
 }
 
 a#create__button{
-  font-size: medium;
+  font-size:larger;
+  font-weight: 500;
   text-decoration: none;
   background-color: transparent;
-  padding: 3px 8px;
+  padding: 5px 10px;
   border-radius: 20px;
-  border: solid 0.5px $airbnb-color;
+  border: solid 0.5px transparent;
   cursor: pointer;
   &:hover{
-    box-shadow: 0px 5px 10px 0px rgba(209, 209, 209, 0.5);
+    box-shadow: 0px 5px 10px 0px rgba(230, 230, 230, 0.5);
     transition: 0.3s;
   }
 }
@@ -35,6 +36,7 @@ a.button--color{
 a.session{
   font-size: medium;
   margin-right: 15px;
+
 }
 
 .navbar__right{
@@ -44,7 +46,7 @@ a.session{
 
 // dropdown
 
-.User__info_navbar{
+.User__info__navbar{
   color: $airbnb-color;
   padding: 12px 16px;
   top: -20px;
@@ -83,6 +85,7 @@ a.session{
   border-radius: 5px;
   z-index: 20000;
   transition: 0.5s;
+
 }
 
 .dropdown__content a{
@@ -99,11 +102,22 @@ a.session{
 }
 
 .dropdown .dropdown__content{
-  top: -20px;
+  top: -22px;
 }
 
 .dropdown:hover .dropdown__content{
-  top: -20px;
+  top: -22px;
   right: -70px;
   transition: 0.5s;
+}
+
+.explore a{
+  color: black;
+  font-size:medium;
+  margin-left: 30px;
+}
+
+.navbar__left{
+  display: flex;
+  align-items: center;
 }

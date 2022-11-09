@@ -1,3 +1,46 @@
-<div class="banner">
-<%= image_tag 'alexander-jawfox-S2PxQ1xYorw-unsplash.jpg' %>
+<div>
+  <div class="banner">
+    <%= image_tag 'emmanuel-bior-PHZvyYqPsKo-unsplash.jpg' %>
+  </div>
+  <div class="copy">
+    <h1>Borrow your dream camera</h1>
+    <h5>You can find your nearest camera</h5>
+  </div>
+  <% if !user_signed_in? %>
+    <div class="signin">
+      <%= link_to "Sign in", new_user_registration_path, class: "button--color", id: "signin__button" %>
+    </div>
+  <% end %>
 </div>
+<main>
+  <div class="why-choose-us">
+    <h2>Why do you choose Camera24?</h2>
+    <h6>Quick and intuitive use of our platform,<br>You can borrow a camera on the go!</h6>
+  </div>
+  <div class="cards__city">
+    <div class="card__city">
+      <img class="city" src="https://images.unsplash.com/photo-1508050919630-b135583b29ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="">
+      <%= link_to "Paris", root_path, class: "card__link__home" %>
+    </div>
+    <div class="card__city">
+      <img class="city" src="https://images.unsplash.com/photo-1517394834181-95ed159986c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80" alt="">
+      <%= link_to "London", root_path, class: "card__link__home" %>
+    </div>
+    <div class="card__city">
+      <img class="city" src="https://images.unsplash.com/photo-1583594454973-4ddbab9dfd0e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2681&q=80" alt="">
+      <%= link_to "Berlin", root_path, class: "card__link__home" %>
+    </div>
+    <div class="card__city">
+      <img class="Dublin" src="https://images.unsplash.com/photo-1515519158088-d2a3acf621b9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="">
+      <%= link_to "Amsterdam", root_path, class: "card__link__home" %>
+    </div>
+    <div class="card__city">
+      <img class="city" src="https://images.unsplash.com/photo-1584003564911-a7a321c84e1c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1284&q=80" alt="">
+      <%= link_to "Amsterdam", root_path, class: "card__link__home" %>
+    </div>
+    <div class="card__city">
+      <img class="city" src="https://images.unsplash.com/photo-1513543806865-85e29a7c0352?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80" alt="">
+      <%= link_to "Valetta", root_path, class: "card__link__home" %>
+    </div>
+  </div>
+</main>
