@@ -1,7 +1,7 @@
 .navbar{
-  background-color: white;
   padding: 20px 70px;
   border-bottom: solid 0.5px #DDDDDD;
+  background-color: white;
   position: fixed;
   width: 100%;
   top: 0;
@@ -13,6 +13,17 @@
   font-size:x-large;
   text-decoration: none;
 }
+
+.navbar__home{
+  padding: 20px 70px;
+  background-color: transparent !important;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 20000;
+  border-bottom: none;
+}
+
 
 a#create__button{
   font-size:larger;
@@ -120,4 +131,17 @@ a.session{
 .navbar__left{
   display: flex;
   align-items: center;
+}
+
+// search bar
+
+input#query.form{
+  width: 100%;
+}
+
+@media (max-width: 540px) {
+  /* For a screen < 960px, this CSS will be read */
+  .explore a{
+    display: none;
+  }
 }

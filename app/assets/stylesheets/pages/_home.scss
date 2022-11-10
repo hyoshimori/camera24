@@ -2,33 +2,34 @@
 
 .why-choose-us{
   text-align: center;
-  margin-top: 100px;
+  margin-top: 45px;
   color: rgb(90, 90, 90);
 }
 
 .cards__city img {
-  width: 280px;
+  width: 380px;
   height: 250px;
   border-radius: 10px;
-  margin: auto;
   margin: 0 auto;
   border: none;
   box-shadow: 0px 5px 10px 0px rgba(165, 165, 165, 0.5);
   margin-left: auto;
+  z-index: -1;
 }
 
 .cards__city{
-  margin-top: 100px;
+  margin-top: 30px;
   margin-bottom: 100px;
   margin-left: 100px;
   margin-right: 100px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   padding: 16px;
   flex-grow: 1;
+  z-index: -1;
 }
 
 div.card__city{
@@ -42,30 +43,42 @@ div.card__city{
 div.card__city a{
   text-decoration: none;
   position: absolute;
-  left: 30px;
-  top: 180px;
+  // left: 30px;
+  // top: 180px;
   font-size: Large;
   color: white;
   opacity: 0.7;
-  border-bottom: solid 1px white;
 }
 
-.card__link__home::after {
+.card__link__home{
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 1;
   pointer-events: auto;
   content: "";
   background-color: transparent;
 }
 
-@media (max-width: 960px) {
+p.city__name{
+  color: white;
+  opacity: 0.8;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+
+@media (max-width: 1290px) {
   /* For a screen < 960px, this CSS will be read */
   .cards__city {
     grid-template-columns: 1fr 1fr;
+  }
+  .cards__city img{
+    width: 290px;
   }
 }
 
@@ -74,12 +87,18 @@ div.card__city a{
   .cards__city {
     grid-template-columns: 1fr;
   }
+  .cards__city img{
+    width: 280px;
+  }
 }
 
 @media (max-width: 540px) {
   /* For a screen < 540px, this CSS will be read */
   .cards__city {
     grid-template-columns: 1fr;
+  }
+  .cards__city img{
+    width: 280px;
   }
 
   .copy h1{

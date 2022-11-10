@@ -1,4 +1,8 @@
-<div class="navbar navbar--pink" data-controller="navbar">
+<% if params[:controller] == "pages" && params[:action] == "home" %>
+  <div class="navbar navbar__home navbar--pink">
+<% else %>
+  <div class="navbar navbar--pink">
+<% end %>
   <div class="navbar__left">
     <div class="icon">
       <%= link_to "Camera24", root_path %>
@@ -6,9 +10,21 @@
     <div class="explore">
       <%= link_to "Explore", cameras_path %>
     </div>
+    <div class="seach__bar search" data-controller="navbar">
+      <button data-action="click->navbar#input"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <form action="/cameras" method="get">
+        <input name="query"
+               type="text"
+               class="search__bar"
+               params="[:query]"
+               placeholder=" search"
+               data-navbar-target="input"
+               >
+      </form>
+    </div>
   </div>
     <div class="navbar__right">
-      <%= link_to "CAMERA", new_camera_path, class: "button--color", id: "create__button" %>
+      <%= link_to "Start", new_camera_path, class: "button--color", id: "create__button" %>
         <div class="dropdown">
           <button class="drop__button"></button>
             <div class="dropdown__content">
