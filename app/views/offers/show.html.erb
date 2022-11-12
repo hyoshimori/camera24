@@ -1,8 +1,8 @@
 <div class="container">
   <div class="navbar-fix">
-    <h1>Booking <%= @offer.id %></h1>
+    <h1>Booking for <%= @offer.camera.name %></h1>
   </div>
-
-  <p>Accept or decline this booking:</p>
-  <%= link_to "Edit this booking", edit_offer_path(@offer.id) %>
+  <p>Your camera <%= @offer.camera.name %> was booked by <%= @offer.user.first_name %> <%= @offer.user.last_name %></p>
+  Status: <%= @offer.status %>
+  <%= link_to "Accept or decline this booking", edit_offer_path(@offer.id), class: "button--color", id: "button" %>
 </div>

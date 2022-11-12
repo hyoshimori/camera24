@@ -1,6 +1,9 @@
 class OffersController < ApplicationController
   def index
-    @offers = Offer.where(user_id: current_user)
+    # @offers = Offer.joins(:camera).where("offers.user_id = :query OR cameras.user_id = :query", query: current_user.id)
+    @other_offers = Offer.joins(:camera).where("cameras.user_id = :query", query: current_user.id)
+    @my_offers = Offer.where(user_id: current_user)
+    # @other_bookings = Offer.where.not(user_id: current_user)
   end
 
   def show
@@ -29,11 +32,14 @@ class OffersController < ApplicationController
   end
 
   def update
+    @offer = Offer.find(params[:id])
+    @offer.update(offers_params)
+    redirect_to offer_path(@offer)
   end
 
   private
 
   def offers_params
-    params.require(:offer).permit(:camera_id, :user_id)
+    params.require(:offer).permit(:camera_id, :user_id, :status)
   end
 end

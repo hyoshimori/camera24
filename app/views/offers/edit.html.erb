@@ -1,2 +1,9 @@
-<h1>Accept or decline this offer</h1>
+<div class="container">
+  <div class="navbar-fix">
+    <h1>Accept or decline this offer</h1>
+  </div>
 
+<%= link_to 'Accept', offer_path(@offer.id), class: "acceptbutton--color", id: "button", data: { method: :patch, params: { offer: { status: 1 } } }  %>
+<%= link_to 'Decline', offer_path(@offer.id), class: "declinebutton--color", id: "button", data: { method: :patch, params: { offer: { status: 2 } } }  %>
+
+</div>

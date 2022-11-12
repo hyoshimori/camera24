@@ -12,6 +12,20 @@
   flex-grow: 1;
 }
 
+.offers__list {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  padding: 16px;
+  flex-grow: 1;
+}
+
 .cameras__card{
   width: 280px;
   height: 250px;
@@ -22,6 +36,65 @@
   border: none;
   box-shadow: 0px 5px 10px 0px rgba(165, 165, 165, 0.5);
   margin-left: auto;
+}
+
+.offers__card{
+  width: 280px;
+  height: 330px;
+  border-radius: 10px;
+  margin: auto;
+  position: relative;
+  margin: 0 auto;
+  border: none;
+  box-shadow: 0px 5px 10px 0px rgba(165, 165, 165, 0.5);
+  margin-left: auto;
+  text-decoration: none;
+}
+
+.otheroffers__card{
+  width: 280px;
+  height: 360px;
+  border-radius: 10px;
+  margin: auto;
+  position: relative;
+  margin: 0 auto;
+  border: none;
+  box-shadow: 0px 5px 10px 0px rgba(165, 165, 165, 0.5);
+  margin-left: auto;
+  text-decoration: none;
+}
+
+.otheroffers__card img{
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+  background-position: center;
+  object-fit: cover;
+}
+
+.offers__texts{
+  display: block;
+  right: 0;
+  padding: 20px 10px 10px 10px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.offers__texts a{
+  color: $airbnb-color;
+  text-decoration: none;
+}
+
+.offers__texts h3{
+  display: block;
+  right: 0;
+  color: $airbnb-color;
+}
+
+.offers__card img{
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+  background-position: center;
+  object-fit: cover;
 }
 
 .cameras__card p{

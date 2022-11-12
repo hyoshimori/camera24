@@ -1,0 +1,28 @@
+a#button{
+  font-size: medium;
+  text-decoration: none;
+  background-color: transparent;
+  padding: 3px 8px;
+  border-radius: 20px;
+  border: solid 1px transparent;
+  cursor: pointer;
+  &:hover{
+    box-shadow: 0px 5px 10px 0px rgba(165, 165, 165, 0.5);
+    transition: 0.3s;
+  }
+}
+
+a.acceptbutton--color{
+  color: $airbnb-color;
+  text-decoration: none;
+}
+
+a.declinebutton--color{
+  color: grey;
+  text-decoration: none;
+}
+
+a.session{
+  font-size: medium;
+  margin-right: 15px;
+}
