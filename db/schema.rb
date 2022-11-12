@@ -57,6 +57,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_10_183008) do
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "status", default: 0
     t.index ["camera_id"], name: "index_offers_on_camera_id"
     t.index ["user_id"], name: "index_offers_on_user_id"
   end

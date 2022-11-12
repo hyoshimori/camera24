@@ -1,11 +1,37 @@
 <div class="container">
-  <div class="navbar-fix">
-    <h1>All my bookings</h1>
+    <div class="navbar-fix">
+      <h1>My bookings</h1>
+    </div>
+      <div class="offers__list">
+        <% @my_offers.each_with_index do |offer, index| %>
+          <div class="offers__card">
+            <% if offer.camera.photo.attached? %>
+              <%= cl_image_tag offer.camera.photo.key, width: 250, height: 170 %>
+            <div class="offers__texts">
+                <h3>Booking #<%= "#{index + 1}" %><br></h3>
+                Name: <%= link_to offer.camera.name, camera_path(offer.camera.id), class: "card__link" %><br>
+                Location: <%= offer.camera.location %><br>
+                Price: $<%= offer.camera.price %> per day<br>
+                Status: <%= offer.status %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+        <h1>Bookings of my cameras</h1>
+      <div class="offers__list">
+        <% @other_offers.each_with_index do |offer, index| %>
+          <div class="otheroffers__card">
+            <% if offer.camera.photo.attached? %>
+              <%= cl_image_tag offer.camera.photo.key, width: 250, height: 170 %>            <div class="offers__texts">
+              <h3><%= link_to "Booking #" "#{index + 1}", offer_path(offer.id) %><br></h3>
+              Name: <%= link_to offer.camera.name, camera_path(offer.camera.id) %><br>
+              Location: <%= offer.camera.location %><br>
+              $<%= offer.camera.price %> per day<br>
+              Status: <%= offer.status %><br>
+              <%= link_to "Accept or decline this booking",  edit_offer_path(offer.id) %>
+            </div>
+          </div>
+        <% end %>
+      </div>
   </div>
-    <p><% @offers.each do |offer|%>
-      <%= link_to offer.camera.name, camera_path(offer.camera.id) %>,
-      <%= offer.camera.location %>,
-      <%= offer.camera.price %>
-    </p>
-    <% end %>
-</div>
+</main>
