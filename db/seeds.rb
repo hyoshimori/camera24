@@ -8,16 +8,19 @@
 
 require "faker"
 
+Offer.destroy_all
 Camera.destroy_all
 
 pirce = ["55", "65", "85", "95", "60", "70", "80", "90", "200", "300", "400"]
+city = ["Pairs", "London", "Berlin", "Valletta", "Amsterdam", "Helsinki", "Rome", "Prahue", "Venice", "Barcelona", "Munich", "Budapest", "Seville", "Lisbon", "Copenhagen", "Stockholm", "Athens", "Istanbul", "Edinburgh", "Porto", "Galway", "Zurich", "Oslo", "Dublin", "Paris",
+        "Milan", "Helsinki", "Annecy", "Saint Petersburg", "Bergen", "Brussels", "Bucharest", "Bern", "Kyiv", "Basel", "Tokyo", "Kyoto", "Osaka", "Hokkaido", "Seul", "Busan", "Perth", "Adeleide", "Sydny", "Darwin"]
 
 users = []
 
 5.times do
   user = User.new(
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
+    # first_name: Faker::Name.first_name,
+    # last_name: Faker::Name.last_name,
     email: Faker::Internet.email,
     password: "*************"
   )
@@ -30,7 +33,7 @@ end
   camera = Camera.new(
     name: Faker::Camera.brand_with_model,
     price: pirce.sample,
-    location: Faker::Address.city,
+    location: city.sample,
     user: users.sample
   )
   camera.save!

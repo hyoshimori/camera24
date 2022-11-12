@@ -1,1 +1,11 @@
-<h1>All offers</h1>
+<div class="container">
+  <div class="navbar-fix">
+    <h1>All my bookings</h1>
+  </div>
+    <p><% @offers.each do |offer|%>
+      <%= link_to offer.camera.name, camera_path(offer.camera.id) %>,
+      <%= offer.camera.location %>,
+      <%= offer.camera.price %>
+    </p>
+    <% end %>
+</div>
