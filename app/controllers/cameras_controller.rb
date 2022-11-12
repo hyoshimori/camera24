@@ -1,6 +1,13 @@
 class CamerasController < ApplicationController
   def index
-    @cameras = Camera.all
+    if params[:query].present?
+      sql_query = "name @@ :query OR location @@ :query"
+      # @cameras = Camera.where(name: params[:query]) -> not case sensitive
+      @cameras = Camera.where(sql_query,
+        query: "%#{params[:query]}%")
+    else
+      @cameras = Camera.all
+    end
   end
 
   def show
@@ -40,6 +47,6 @@ class CamerasController < ApplicationController
   private
 
   def camera_params
-    params.require(:camera).permit(:name, :location, :price)
+    params.require(:camera).permit(:name, :location, :price, :photo)
   end
 end

@@ -1,14 +1,22 @@
 <div class="container">
-  <div class="navbar-fix">
-    <h1><%= @camera.name %></h1>
+  <div class="navbar-fix camera__name">
+    <h3><%= @camera.name %></h3>
   </div>
-  <div>
-    <p>Location: <%= @camera.location %></p>
-    <p>Price per day: $<%= @camera.price %></p>
+    <div class="sign-in">
+      <% if user_signed_in? %>
+        <%= link_to "Borrow",  new_camera_offer_path(@camera.id) %>
+        <%= link_to "Edit",  edit_camera_path(@camera.id) %>
+        <%= link_to "Delete", camera_path(@camera.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete #{@camera.name}?"} %>
+      <% end %>
+    </div>
+  <div class="show__upper_side">
+    <div class="photo__camera">
+      <% if @camera.photo.attached? %>
+        <%= cl_image_tag @camera.photo.key, width: 250, height: 150 %>
+      <% end %>
+    </div>
+    <div class="camera__info">
+      <p>Location: <%= @camera.location %></p>
+      <p>Price per day: $<%= @camera.price %></p>
+    </div>
   </div>
-
-<% if user_signed_in? %>
-  <p><%= link_to "Borrow #{@camera.name}",  new_camera_offer_path(@camera.id) %></p>
-  <p><%= link_to "Edit #{@camera.name}",  edit_camera_path(@camera.id) %></p>
-  <p><%= link_to "Delete #{@camera.name}", camera_path(@camera.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete #{@camera.name}?"} %></p>
-<% end %>
