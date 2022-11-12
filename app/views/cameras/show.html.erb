@@ -2,6 +2,9 @@
   <div class="navbar-fix">
     <h1><%= @camera.name %></h1>
   </div>
+
+<%= cl_image_tag @camera.photo.key, crop: :thumb %>
+
   <div>
     <p>Location: <%= @camera.location %></p>
     <p>Price per day: $<%= @camera.price %></p>
